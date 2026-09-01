@@ -1,0 +1,6 @@
+# usage_dashboard.py uses only the Python 3 standard library
+# (json, threading, http.server, urllib, pathlib, glob, os, time).
+# No external packages are required to run it.
+#
+# Optional, for running the test suite in tests/:
+# pytest

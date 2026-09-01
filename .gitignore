@@ -1,0 +1,20 @@
+# PlatformIO
+firmware/.pio/
+firmware/.vscode/
+
+# Firmware secrets (local WiFi/dashboard config, never commit this)
+firmware/include/secrets.h
+secrets.h
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Logs
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

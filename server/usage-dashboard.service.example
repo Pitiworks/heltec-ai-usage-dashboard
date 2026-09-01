@@ -1,0 +1,24 @@
+# Example systemd unit for usage_dashboard.py.
+#
+# Copy to /etc/systemd/system/usage-dashboard.service, replace the
+# placeholders below with your own user/paths, then:
+#
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now usage-dashboard.service
+
+[Unit]
+Description=AI Usage Dashboard (Claude/Codex rate-limit API for the e-Ink display)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=<YOUR_USER>
+Group=<YOUR_USER>
+WorkingDirectory=/path/to/eink-ai-usage-dashboard/server
+ExecStart=/usr/bin/python3 /path/to/eink-ai-usage-dashboard/server/usage_dashboard.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
